@@ -1,0 +1,66 @@
+{
+  "name": "js-drive-light-client",
+  "version": "0.0.1",
+  "description": "a light client for Dash platform",
+  "contributors": [
+    {
+      "name": "Ivan Shumkov",
+      "email": "ivan@shumkov.ru",
+      "url": "https://github.com/shumkov"
+    },
+    {
+      "name": "Djavid Gabibiyan",
+      "email": "djavid@dash.org",
+      "url": "https://github.com/jawid-h"
+    },
+    {
+      "name": "Anton Suprunchuk",
+      "email": "anton.suprunchuk@dash.org",
+      "url": "https://github.com/antouhou"
+    },
+    {
+      "name": "Konstantin Shuplenkov",
+      "email": "konstantin.shuplenkov@dash.org",
+      "url": "https://github.com/shuplenkov"
+    },
+    {
+      "name": "Cofresi",
+      "email": "cofresi@dash.org",
+      "url": "https://github.com/Cofresi"
+    }
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@dashevo/dashcore-lib": "dashevo/dashcore-lib#updateTypes"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@dashevo/dpp": "~0.17.0-dev.2",
+    "babel-loader": "^8.0.6",
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "core-js": "^3.6.4",
+    "dirty-chai": "^2.0.1",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-jsdoc": "^27.0.0",
+    "karma": "^5.0.9",
+    "karma-chai": "^0.1.0",
+    "karma-chrome-launcher": "^3.1.0",
+    "karma-firefox-launcher": "^1.3.0",
+    "karma-mocha": "^2.0.1",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^7.2.0",
+    "nyc": "^15.1.0",
+    "sinon": "^8.1.1",
+    "sinon-chai": "^3.4.0",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dashevo/js-drive-light-client.git"
+  }
+}
