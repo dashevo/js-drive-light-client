@@ -31,7 +31,7 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "@dashevo/dashcore-lib": "~0.19.9"
+    "@dashevo/dashcore-lib": "dashevo/dashcore-lib#add-platform-quorum"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
