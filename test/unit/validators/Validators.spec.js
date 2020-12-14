@@ -53,18 +53,7 @@ describe('Validators', () => {
       }).to.throw('Validators class requires smlStore as a parameter');
     });
   });
-  describe('#getValidatorSet', () => {
-    it('should get the latest validator set', async () => {
-      const validatorSet = await validators.getValidatorSet(rotationSignature);
-      expect(validatorSet).to.deep.equal(fixedValidatorSet);
-    });
-    it('should get the latest validator set with only verified quorums', async () => {
-      const validatorSet = await validators.getValidatorSet(
-        rotationSignature, true,
-      );
-      expect(validatorSet).to.deep.equal(fixedValidatorSet);
-    });
-  });
+
   describe('#getValidatorSetForCoreHeight', () => {
     it('should get the validator set for a specific core height ', async () => {
       const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(
