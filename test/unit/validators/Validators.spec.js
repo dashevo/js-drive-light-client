@@ -35,10 +35,7 @@ describe('Validators', () => {
       getSMLbyHeight: this.sinon.stub().returns(smlMock),
       getCurrentSML: this.sinon.stub().returns(smlMock),
     };
-    // const diffArray = new Array(17);
-    // smlStoreMock = SimplifiedMNListStore(diffArray);
     rotationSignature = Buffer.from(rotationSignatureString, 'hex');
-    platformBlockHeight = 111;
     coreBlockHeight = 2222;
     validators = new Validators(smlStoreMock);
   });
@@ -57,13 +54,13 @@ describe('Validators', () => {
   describe('#getValidatorSetForCoreHeight', () => {
     it('should get the validator set for a specific core height ', async () => {
       const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(
-        rotationSignature, platformBlockHeight, coreBlockHeight,
+        rotationSignature, coreBlockHeight,
       );
       expect(validatorSetForHeight).to.deep.equal(fixedValidatorSet);
     });
     it('should get the validator set for a specific core height with only verified quorums', async () => {
       const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(
-        rotationSignature, platformBlockHeight, coreBlockHeight, true,
+        rotationSignature, coreBlockHeight, true,
       );
       expect(validatorSetForHeight).to.deep.equal(fixedValidatorSet);
     });
