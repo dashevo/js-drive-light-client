@@ -8,7 +8,6 @@ describe('Validators', () => {
   let quorumFixtures;
   const rotationSignatureString = '0afe29b3c969b3ceeadc1b6224b27b2696d24f0afd0fee5e7135854c6e0789fd5abc15e7108eb9ac8a512954c8851163032c424c610a357e5acc712c459f3924e529f3d9476977417bdb64e1cabf978086bdf455c727c4012ef85ef793793839';
   let rotationSignature;
-  let platformBlockHeight;
   let coreBlockHeight;
   const fixedValidatorSet = {
     version: 1,
