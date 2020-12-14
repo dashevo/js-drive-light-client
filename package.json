@@ -40,7 +40,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@dashevo/dashcore-lib": "~0.19.10"
+    "@dashevo/dashcore-lib": "~0.19.11"
   },
   "devDependencies": {
     "@babel/core": "^7.10.2",
