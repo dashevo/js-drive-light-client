@@ -10,7 +10,6 @@ describe('Validators', () => {
   let quorumFixtures;
   const rotationSignatureString = '0afe29b3c969b3ceeadc1b6224b27b2696d24f0afd0fee5e7135854c6e0789fd5abc15e7108eb9ac8a512954c8851163032c424c610a357e5acc712c459f3924e529f3d9476977417bdb64e1cabf978086bdf455c727c4012ef85ef793793839';
   let rotationSignature;
-  let platformBlockHeight;
   let coreBlockHeight;
   const fixedValidatorSet = {
       version: 1,
@@ -40,7 +39,6 @@ describe('Validators', () => {
     //const diffArray = new Array(17);
     //smlStoreMock = SimplifiedMNListStore(diffArray);
     rotationSignature = Buffer.from(rotationSignatureString, 'hex')
-    platformBlockHeight = 111;
     coreBlockHeight = 2222;
     validators = new Validators(smlStoreMock);
   });
@@ -57,21 +55,21 @@ describe('Validators', () => {
   });
   describe('#getValidatorSet', () => {
     it('should get the latest validator set', async () => {
-      const validatorSet = await validators.getValidatorSet(rotationSignature, platformBlockHeight);
+      const validatorSet = await validators.getValidatorSet(rotationSignature);
       expect(validatorSet).to.deep.equal(fixedValidatorSet);
     });
     it('should get the latest validator set with only verified quorums', async () => {
-      const validatorSet = await validators.getValidatorSet(rotationSignature, platformBlockHeight, true);
+      const validatorSet = await validators.getValidatorSet(rotationSignature, true);
       expect(validatorSet).to.deep.equal(fixedValidatorSet);
     });
   });
   describe('#getValidatorSetForCoreHeight', () => {
     it('should get the validator set for a specific core height ', async () => {
-      const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(rotationSignature, platformBlockHeight, coreBlockHeight);
+      const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(rotationSignature, coreBlockHeight);
       expect(validatorSetForHeight).to.deep.equal(fixedValidatorSet);
     });
     it('should get the validator set for a specific core height with only verified quorums', async () => {
-      const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(rotationSignature, platformBlockHeight, coreBlockHeight, true);
+      const validatorSetForHeight = await validators.getValidatorSetForCoreHeight(rotationSignature, coreBlockHeight, true);
       expect(validatorSetForHeight).to.deep.equal(fixedValidatorSet);
     });
   });
