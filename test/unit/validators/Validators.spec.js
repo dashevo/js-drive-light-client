@@ -1,5 +1,5 @@
 const { SimplifiedMNListStore } = require('@dashevo/dashcore-lib');
-const Validators = require('../../../lib/validators');
+const Validators = require('../../../lib/validators/Validators');
 const validatorFixtures = require('../fixtures/validators');
 
 describe('Validators', () => {
