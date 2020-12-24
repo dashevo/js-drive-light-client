@@ -1,5 +1,5 @@
 {
-  "name": "@dashevo/js-drive-light-client",
+  "name": "@dashevo/lightclient",
   "version": "0.17.0",
   "description": "a light client for Dash platform",
   "contributors": [

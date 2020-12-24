@@ -9,7 +9,7 @@ The JavaScript implementation of the Dash Platform Light Client [Dash Platform L
 ## Install
 
 ```sh
-npm install @dashevo/js-drive-light-client
+npm install @dashevo/lightclient
 ```
 
 ## Maintainer
