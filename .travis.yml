@@ -34,5 +34,5 @@ deploy:
     skip_cleanup: true
     script: bash scripts/travis-deploy.sh
     on:
-      repo: dashevo/js-drive-light-client
+      repo: dashevo/lightclient
       tags: true
